@@ -6,7 +6,7 @@ Visualizzazione di Blob Image con SpatiaLite e QGIS / Visualization of Blob Imag
 
 - [BlobImageSL](#blobimagesl)
   - [Perché questo repository](#perché-questo-repository)
-  - [Scrip](#scrip)
+  - [Script](#script)
     - [Script azione Python](#script-azione-python)
     - [Funzione custom per field calc](#funzione-custom-per-field-calc)
     - [Espressione per widget HTML](#espressione-per-widget-html)
@@ -21,7 +21,7 @@ Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/20
 
 Il repository vuole documentare tutti i passaggi e gli script necessari per poter utilizzare le foto (con geotag) e i metadati direttamente in QGIS, per esempio visualizzazione delle foto tramite _azione Python_, _suggerimenti mappa_, _moduli tramite widget_ e _compositore di stampe_.
 
-## Scrip
+## Script
 
 ### Script azione Python
 
@@ -106,7 +106,7 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 ### Espressione per widget HTML
 
-```
+```html
 <script>document.write(expression.evaluate(" blobjpg_to_html( \"photo\",'width=\"300\" height=\"420\"')"));</script>
 ``` 
 
@@ -124,3 +124,4 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 - **blog post di Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
 - **blog post di Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
+- **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
