@@ -12,6 +12,11 @@ Visualizzazione di Blob Image con SpatiaLite e QGIS / Visualization of Blob Imag
     - [Espressione per widget HTML](#espressione-per-widget-html)
     - [Corniche HTML per Atlas](#corniche-html-per-atlas)
   - [Riferimenti](#riferimenti)
+  - [Screenshot](#screenshot)
+    - [Azione](#azione)
+    - [Map tips](#map-tips)
+    - [Widget HTML per modulo](#widget-html-per-modulo)
+    - [Atlas](#atlas)
 
 <!-- /TOC -->
 
@@ -24,6 +29,9 @@ Il repository vuole documentare tutti i passaggi e gli script necessari per pote
 ## Script
 
 ### Script azione Python
+
+
+Alla riga 7 sostituire il valore unique_field_name con il nome di un campo univoco (magari la chiave primaria), la riga 8 deve contenere il nome del campo dove sono state memorizzate le foto ed infine alla riga 9 va messo lo stesso valore come alla riga 5 lasciando in questo caso la stringa ‘[% %]’.
 
 ```python
 from qgis.PyQt.QtCore import Qt
@@ -62,6 +70,8 @@ label.show()
 - **Articolo**: https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/
 
 ### Funzione custom per field calc
+
+Utilizzato per i suggerimenti mappa (visualizzare la foto con il passaggio del mouse)
 
 ```python
 from qgis.core import *
@@ -125,3 +135,31 @@ def blobjpg_to_html(blob,style,feature,parent):
 - **blog post di Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
 - **blog post di Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
 - **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
+
+## Screenshot
+
+### Azione
+
+![](imgs/action.png)
+
+![](imgs/action_view.png)
+
+### Map tips
+
+![](imgs/field_calc1.png)
+
+![](imgs/field_calc2.png)
+
+![](imgs/field_calc3.png)
+
+![](imgs/maptips1.png)
+
+### Widget HTML per modulo
+
+![](imgs/widget1.png)
+
+![](imgs/widget2.png)
+
+### Atlas
+
+![](imgs/ATLAS.png)
