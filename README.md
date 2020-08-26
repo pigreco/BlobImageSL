@@ -69,6 +69,8 @@ label.show()
 - **Autore**: Salvatore Larosa
 - **Articolo**: https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/
 
+↑[torna su](#blobimagesl)↑
+
 ### Funzione custom per field calc
 
 Utilizzato per i suggerimenti mappa (visualizzare la foto con il passaggio del mouse)
@@ -128,6 +130,8 @@ def blobjpg_to_html(blob,style,feature,parent):
 [% blobjpg_to_html("Photo",'width="450" height="650"') %]
 ```
 
+↑[torna su](#blobimagesl)↑
+
 - **Autore**: Giulio Fattori
 
 ## Riferimenti
@@ -136,6 +140,8 @@ def blobjpg_to_html(blob,style,feature,parent):
 - **blog post di Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
 - **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
 
+↑[torna su](#blobimagesl)↑
+
 ## Screenshot
 
 ### Azione
@@ -143,6 +149,8 @@ def blobjpg_to_html(blob,style,feature,parent):
 ![](imgs/action.png)
 
 ![](imgs/action_view.png)
+
+↑[torna su](#blobimagesl)↑
 
 ### Map tips
 
@@ -154,12 +162,18 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 ![](imgs/maptips1.png)
 
+↑[torna su](#blobimagesl)↑
+
 ### Widget HTML per modulo
 
 ![](imgs/widget1.png)
 
 ![](imgs/widget2.png)
 
+↑[torna su](#blobimagesl)↑
+
 ### Atlas
 
 ![](imgs/ATLAS.png)
+
+↑[torna su](#blobimagesl)↑
