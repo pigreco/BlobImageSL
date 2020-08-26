@@ -2,15 +2,30 @@
 
 Visualizzazione di Blob Image con SpatiaLite e QGIS / Visualization of Blob Image with SpatiaLite and QGIS
 
+<!-- TOC -->
+
+- [BlobImageSL](#blobimagesl)
+  - [Perché questo repository](#perché-questo-repository)
+  - [Scrip](#scrip)
+    - [Script azione Python](#script-azione-python)
+    - [Funzione custom per field calc](#funzione-custom-per-field-calc)
+    - [Espressione per widget HTML](#espressione-per-widget-html)
+    - [Corniche HTML per Atlas](#corniche-html-per-atlas)
+  - [Riferimenti](#riferimenti)
+
+<!-- /TOC -->
+
 ## Perché questo repository
 
 Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) blog post su Pigrecoinfinito in cui descrivo come visualizzare delle foto, con geotag, a partire da un database SpatiaLite: database realizzato utilizzando `ImportEXIFphotos` che trasforma le foto in formato `BLOB`.
 
 Il repository vuole documentare tutti i passaggi e gli script necessari per poter utilizzare le foto (con geotag) e i metadati direttamente in QGIS, per esempio visualizzazione delle foto tramite _azione Python_, _suggerimenti mappa_, _moduli tramite widget_ e _compositore di stampe_.
 
-## Script azione Python
+## Scrip
 
-```
+### Script azione Python
+
+```python
 from qgis.PyQt.QtCore import Qt
 from qgis.PyQt.QtWidgets import QLabel
 from qgis.PyQt.QtGui import QImage, QPixmap
@@ -43,9 +58,12 @@ label.setPixmap(pixmap.scaled(w,h,Qt.KeepAspectRatio))
 label.show()
 ```
 
-## Funzione custom per field calc
+- **Autore**: Salvatore Larosa
+- **Articolo**: https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/
 
-```
+### Funzione custom per field calc
+
+```python
 from qgis.core import *
 from qgis.gui import *
 
@@ -84,14 +102,25 @@ def blobjpg_to_html(blob,style,feature,parent):
     return fullstring
 ```
 
-## Espressione per widget HTML
+- **Autore**: Giulio Fattori
+
+### Espressione per widget HTML
 
 ```
-<script>document.write(expression.evaluate(" blobjpg_to_html(  \"photo\" , 'width=\"300\" height=\"420\"')"));</script>
+<script>document.write(expression.evaluate(" blobjpg_to_html( \"photo\",'width=\"300\" height=\"420\"')"));</script>
 ``` 
 
-## Corniche HTML per Atlas
+- **Autore**: Giulio Fattori
+
+### Corniche HTML per Atlas
 
 ```
-[% blobjpg_to_html(  "Photo" , 'width="450" height="650"' ) %]
+[% blobjpg_to_html("Photo",'width="450" height="650"') %]
 ```
+
+- **Autore**: Giulio Fattori
+
+## Riferimenti
+
+- **blog post di Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
+- **blog post di Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
