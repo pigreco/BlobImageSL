@@ -93,8 +93,8 @@ def blobjpg_to_html(blob,style,feature,parent):
     <br> in un Widget HTML o in un suggerimento mappa.
     <br>E' obbligatorio il secondo parametro style. 
     <br>Il parametro style puo assumere il valore '' per nessuno stile (dimensioni originali) 
-    <br>o può essere una stringa CSS di stile per img HTML tag,
-    <br>Se stile è 'Null' viene applicato di default 'style="max-width:100%; max-height:100%;'.
+    <br>o puo' essere una stringa CSS di stile per img HTML tag,
+    <br>Se stile = 'Null' viene applicato di default 'style="max-width:100%; max-height:100%;'.
     <p style="color:Olive"><b>Sintassi</b></p>
     <p style="color:blue"><b>blobjpg_to_html</b><mark style="color:black">(</mark>
     <mark style="color:red">blob</mark><mark style="color:black">,</mark><mark style="color:red">style</mark><mark style="color:black">)</mark>
