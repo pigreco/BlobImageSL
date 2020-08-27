@@ -8,3 +8,4 @@
 - added project demo
 - added video
 - added splash title
+- added README.md directory `risorse`
