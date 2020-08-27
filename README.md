@@ -107,8 +107,8 @@ def blobjpg_to_html(blob,style,feature,parent):
             <li><mark><i> blobjpg_to_html("photo", Null) -> tag img con dimensioni massime </mark></li>
             <li><mark><i> blobjpg_to_html("photo", 'width="250" height="250"')   -> tag img dimensionato</mark></li>
         </ul>
-    
-    Tratto da https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg
+    <p style="color:Olive"><b>Ringraziamenti</b></p>
+    <p>Tratto da https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg</p>
     """
     blob64 = blob.toBase64().data().decode()
     if style is None:
