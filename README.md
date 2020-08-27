@@ -7,10 +7,10 @@ Visualization of Blob Image with SpatiaLite and QGIS / Visualizzazione di Blob I
 - [BlobImageSL](#blobimagesl)
   - [Why this repository / Perché questo repository](#why-this-repository--perché-questo-repository)
   - [Script](#script)
-    - [Script action Python / scripot azione Python](#script-action-python--scripot-azione-python)
+    - [Script action Python / script azione Python](#script-action-python--script-azione-python)
     - [Custom function for field calc / Funzione personalizzata per field calc](#custom-function-for-field-calc--funzione-personalizzata-per-field-calc)
     - [Expression for widget HTML / Espressione per widget HTML](#expression-for-widget-html--espressione-per-widget-html)
-    - [Frame HTML for Atlas / Corniche HTML per Atlas](#frame-html-for-atlas--corniche-html-per-atlas)
+    - [Frame HTML for Atlas / Cornice HTML per Atlas](#frame-html-for-atlas--cornice-html-per-atlas)
   - [References / Riferimenti](#references--riferimenti)
   - [Screenshot](#screenshot)
     - [Action / Azione](#action--azione)
@@ -34,7 +34,7 @@ Il repository vuole documentare tutti i passaggi e gli script necessari per pote
 
 ## Script
 
-### Script action Python / scripot azione Python
+### Script action Python / script azione Python
 
 [**EN**] In line 7 replace the unique_field_name value with the name of a unique field (perhaps the primary key), line 8 must contain the name of the field where the photos were stored and finally in line 9 the same value must be put as in line 5 in this case leaving the string '[%%]'.
 
