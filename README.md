@@ -12,6 +12,7 @@ Visualization of Blob Image with SpatiaLite and QGIS / Visualizzazione di Blob I
     - [Expression for widget HTML / Espressione per widget HTML](#expression-for-widget-html--espressione-per-widget-html)
     - [Frame HTML for Atlas / Cornice HTML per Atlas](#frame-html-for-atlas--cornice-html-per-atlas)
   - [References / Riferimenti](#references--riferimenti)
+  - [data and QGIS project](#data-and-qgis-project)
   - [Screenshot](#screenshot)
     - [Action / Azione](#action--azione)
     - [Map tips / Suggerimenti mappa](#map-tips--suggerimenti-mappa)
@@ -149,6 +150,14 @@ def blobjpg_to_html(blob,style,feature,parent):
 - **blog post by Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
 - **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
 - **SpatiaLite EXIF GPS** : <http://www.gaia-gis.it/gaia-sins/spatialite-exif-2.3.1.html>
+
+## data and QGIS project
+
+- Directory `risorse` : <https://github.com/pigreco/BlobImageSL/tree/master/risorse>
+  - database sqlite;
+  - qgz project file;
+  - qtp print layout file;
+  - qml theming file.
 
 ↑[come back](#blobimagesl)↑
 
