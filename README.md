@@ -13,6 +13,7 @@ Visualization of Blob Image with SpatiaLite and QGIS / Visualizzazione di Blob I
     - [Frame HTML for Atlas / Cornice HTML per Atlas](#frame-html-for-atlas--cornice-html-per-atlas)
   - [References / Riferimenti](#references--riferimenti)
   - [data and QGIS project](#data-and-qgis-project)
+  - [Video demo](#video-demo)
   - [Screenshot](#screenshot)
     - [Action / Azione](#action--azione)
     - [Map tips / Suggerimenti mappa](#map-tips--suggerimenti-mappa)
@@ -158,6 +159,10 @@ def blobjpg_to_html(blob,style,feature,parent):
   - qgz project file;
   - qtp print layout file;
   - qml theming file.
+
+## Video demo
+
+[![add_col_area_perimetro](https://img.youtube.com/vi/BwCSSMRsf3o/0.jpg)](https://youtu.be/BwCSSMRsf3o "BLOB IMAGE SPATIALITE")
 
 ↑[come back](#blobimagesl)↑
 
