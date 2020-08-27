@@ -7,3 +7,4 @@
 - added data
 - added project demo
 - added video
+- added splash title
