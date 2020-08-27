@@ -30,6 +30,8 @@ The repository wants to document all the steps and scripts necessary to be able 
 
 Il repository vuole documentare tutti i passaggi e gli script necessari per poter utilizzare le foto (con geotag) e i metadati direttamente in QGIS, per esempio visualizzazione delle foto tramite _azione Python_, _suggerimenti mappa_, _moduli tramite widget_ e _compositore di stampe_.
 
+↑[come back](#blobimagesl)↑
+
 ## Script
 
 ### Script action Python / scripot azione Python
@@ -120,6 +122,8 @@ def blobjpg_to_html(blob,style,feature,parent):
 ```
 
 - **Author**: Giulio Fattori
+
+↑[come back](#blobimagesl)↑
 
 ### Expression for widget HTML / Espressione per widget HTML
 
