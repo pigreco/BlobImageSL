@@ -1,37 +1,42 @@
 # BlobImageSL
 
-Visualizzazione di Blob Image con SpatiaLite e QGIS / Visualization of Blob Image with SpatiaLite and QGIS
+Visualization of Blob Image with SpatiaLite and QGIS / Visualizzazione di Blob Image con SpatiaLite e QGIS
 
 <!-- TOC -->
 
 - [BlobImageSL](#blobimagesl)
-  - [Perché questo repository](#perché-questo-repository)
+  - [Why this repository / Perché questo repository](#why-this-repository--perché-questo-repository)
   - [Script](#script)
-    - [Script azione Python](#script-azione-python)
-    - [Funzione custom per field calc](#funzione-custom-per-field-calc)
-    - [Espressione per widget HTML](#espressione-per-widget-html)
-    - [Corniche HTML per Atlas](#corniche-html-per-atlas)
-  - [Riferimenti](#riferimenti)
+    - [Script action Python / scripot azione Python](#script-action-python--scripot-azione-python)
+    - [Custom function for field calc / Funzione personalizzata per field calc](#custom-function-for-field-calc--funzione-personalizzata-per-field-calc)
+    - [Expression for widget HTML / Espressione per widget HTML](#expression-for-widget-html--espressione-per-widget-html)
+    - [Frame HTML for Atlas / Corniche HTML per Atlas](#frame-html-for-atlas--corniche-html-per-atlas)
+  - [References / Riferimenti](#references--riferimenti)
   - [Screenshot](#screenshot)
-    - [Azione](#azione)
-    - [Map tips](#map-tips)
-    - [Widget HTML per modulo](#widget-html-per-modulo)
+    - [Action / Azione](#action--azione)
+    - [Map tips / Suggerimenti mappa](#map-tips--suggerimenti-mappa)
+    - [Widget HTML from module](#widget-html-from-module)
     - [Atlas](#atlas)
 
 <!-- /TOC -->
 
-## Perché questo repository
+## Why this repository / Perché questo repository
 
-Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) blog post su Pigrecoinfinito in cui descrivo come visualizzare delle foto, con geotag, a partire da un database SpatiaLite: database realizzato utilizzando `ImportEXIFphotos` che trasforma le foto in formato `BLOB`.
+[**EN**] The [repository](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) was born after three years from my blog post on Pigrecoinfinito in which I describe how to view photos, with geotags, starting from a SpatiaLite database: a database created using ImportEXIFphotos that transforms photos into BLOB format.
+
+The repository wants to document all the steps and scripts necessary to be able to use the photos (with geotags) and metadata directly in QGIS, for example viewing photos via Python action, map suggestions, modules via widgets and print composer.
+
+[**ITA**] Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) blog post su Pigrecoinfinito in cui descrivo come visualizzare delle foto, con geotag, a partire da un database SpatiaLite: database realizzato utilizzando `ImportEXIFphotos` che trasforma le foto in formato `BLOB`.
 
 Il repository vuole documentare tutti i passaggi e gli script necessari per poter utilizzare le foto (con geotag) e i metadati direttamente in QGIS, per esempio visualizzazione delle foto tramite _azione Python_, _suggerimenti mappa_, _moduli tramite widget_ e _compositore di stampe_.
 
 ## Script
 
-### Script azione Python
+### Script action Python / scripot azione Python
 
+[**EN**] In line 7 replace the unique_field_name value with the name of a unique field (perhaps the primary key), line 8 must contain the name of the field where the photos were stored and finally in line 9 the same value must be put as in line 5 in this case leaving the string '[%%]'.
 
-Alla riga 7 sostituire il valore unique_field_name con il nome di un campo univoco (magari la chiave primaria), la riga 8 deve contenere il nome del campo dove sono state memorizzate le foto ed infine alla riga 9 va messo lo stesso valore come alla riga 5 lasciando in questo caso la stringa ‘[% %]’.
+[**ITA**] Alla riga 7 sostituire il valore unique_field_name con il nome di un campo univoco (magari la chiave primaria), la riga 8 deve contenere il nome del campo dove sono state memorizzate le foto ed infine alla riga 9 va messo lo stesso valore come alla riga 5 lasciando in questo caso la stringa ‘[% %]’.
 
 ```python
 from qgis.PyQt.QtCore import Qt
@@ -66,12 +71,12 @@ label.setPixmap(pixmap.scaled(w,h,Qt.KeepAspectRatio))
 label.show()
 ```
 
-- **Autore**: Salvatore Larosa
-- **Articolo**: https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/
+- **Author**: Salvatore Larosa
+- **Article**: https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
-### Funzione custom per field calc
+### Custom function for field calc / Funzione personalizzata per field calc
 
 Utilizzato per i suggerimenti mappa (visualizzare la foto con il passaggio del mouse)
 
@@ -114,45 +119,45 @@ def blobjpg_to_html(blob,style,feature,parent):
     return fullstring
 ```
 
-- **Autore**: Giulio Fattori
+- **Author**: Giulio Fattori
 
-### Espressione per widget HTML
+### Expression for widget HTML / Espressione per widget HTML
 
 ```html
 <script>document.write(expression.evaluate(" blobjpg_to_html( \"photo\",'width=\"300\" height=\"420\"')"));</script>
 ``` 
 
-- **Autore**: Giulio Fattori
+- **Author**: Giulio Fattori
 
-### Corniche HTML per Atlas
+### Frame HTML for Atlas / Corniche HTML per Atlas
 
 ```
 [% blobjpg_to_html("Photo",'width="450" height="650"') %]
 ```
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
-- **Autore**: Giulio Fattori
+- **Author**: Giulio Fattori
 
-## Riferimenti
+## References / Riferimenti
 
-- **blog post di Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
-- **blog post di Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
+- **blog post from Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
+- **blog post from Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
 - **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
 ## Screenshot
 
-### Azione
+### Action / Azione
 
 ![](imgs/action.png)
 
 ![](imgs/action_view.png)
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
-### Map tips
+### Map tips / Suggerimenti mappa
 
 ![](imgs/field_calc1.png)
 
@@ -162,18 +167,18 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 ![](imgs/maptips1.png)
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
-### Widget HTML per modulo
+### Widget HTML from module
 
 ![](imgs/widget1.png)
 
 ![](imgs/widget2.png)
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
 
 ### Atlas
 
 ![](imgs/ATLAS.png)
 
-↑[torna su](#blobimagesl)↑
+↑[come back](#blobimagesl)↑
