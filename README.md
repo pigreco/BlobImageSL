@@ -71,6 +71,8 @@ pixmap = QPixmap.fromImage(qimg)
 label = QLabel()
 h = label.height()
 w = label.width()
+titolo = "[%name%]"
+label.setWindowTitle(titolo)
 label.setPixmap(pixmap.scaled(w,h,Qt.KeepAspectRatio))
 label.show()
 ```
