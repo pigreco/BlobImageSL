@@ -22,11 +22,11 @@ Visualization of Blob Image with SpatiaLite and QGIS / Visualizzazione di Blob I
 
 ## Why this repository / Perché questo repository
 
-[**EN**] The [repository](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) was born after three years from my blog post on Pigrecoinfinito in which I describe how to view photos, with geotags, starting from a SpatiaLite database: a database created using ImportEXIFphotos that transforms photos into BLOB format.
+[**EN**] The [repository](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) was born after three years from my blog post on Pigrecoinfinito in which I describe how to view photos, with geotags, starting from a SpatiaLite database: a database created using [ImportEXIFphotos](http://www.gaia-gis.it/gaia-sins/spatialite-exif-2.3.1.html) that transforms photos into `BLOB` format.
 
 The repository wants to document all the steps and scripts necessary to be able to use the photos (with geotags) and metadata directly in QGIS, for example viewing photos via Python action, map suggestions, modules via widgets and print composer.
 
-[**ITA**] Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) blog post su Pigrecoinfinito in cui descrivo come visualizzare delle foto, con geotag, a partire da un database SpatiaLite: database realizzato utilizzando `ImportEXIFphotos` che trasforma le foto in formato `BLOB`.
+[**ITA**] Il repository nasce dopo tre anni da [questo mio](https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/) blog post su Pigrecoinfinito in cui descrivo come visualizzare delle foto, con geotag, a partire da un database SpatiaLite: database realizzato utilizzando [ImportEXIFphotos](http://www.gaia-gis.it/gaia-sins/spatialite-exif-2.3.1.html) che trasforma le foto in formato `BLOB`.
 
 Il repository vuole documentare tutti i passaggi e gli script necessari per poter utilizzare le foto (con geotag) e i metadati direttamente in QGIS, per esempio visualizzazione delle foto tramite _azione Python_, _suggerimenti mappa_, _moduli tramite widget_ e _compositore di stampe_.
 
@@ -145,9 +145,10 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 ## References / Riferimenti
 
-- **blog post from Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
-- **blog post from Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
+- **blog post by Totò Fiandaca** : <https://pigrecoinfinito.com/2017/06/18/qgis-visualizzare-blob-image-spatialite/>
+- **blog post by Salvatore Larosa** : <https://slarosagis.wordpress.com/2017/06/18/mai-visto-una-blob-image-da-qgis/>
 - **gis.stackexchange**: <https://gis.stackexchange.com/questions/350541/display-photo-stored-as-blob-in-gpkg>
+- **SpatiaLite EXIF GPS** : <http://www.gaia-gis.it/gaia-sins/spatialite-exif-2.3.1.html>
 
 ↑[come back](#blobimagesl)↑
 
