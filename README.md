@@ -133,7 +133,7 @@ def blobjpg_to_html(blob,style,feature,parent):
 
 - **Author**: Giulio Fattori
 
-### Frame HTML for Atlas / Corniche HTML per Atlas
+### Frame HTML for Atlas / Cornice HTML per Atlas
 
 ```
 [% blobjpg_to_html("Photo",'width="450" height="650"') %]
